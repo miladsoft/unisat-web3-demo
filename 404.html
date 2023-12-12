@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniSat Wallet Demo</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png" />
+    <link rel="manifest" href="icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#282c34" />
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#282c34" />
+    <script src="unisat.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>UniSat Wallet Example</h1>
+
+    <button onclick="connectUniSatWallet()">Connect to UniSat Wallet</button>
+    <button onclick="getUniSatAccounts()">Get UniSat Accounts</button>
+    <button onclick="getUniSatNetwork()">Get UniSat Network</button>
+    <button onclick="switchUniSatNetwork('testnet')">Switch to Testnet</button>
+    <button onclick="getUniSatPublicKey()">Get UniSat Public Key</button>
+    <button onclick="getUniSatBalance()">Get UniSat Balance</button>
+    <button onclick="getUniSatInscriptions(0, 10)">
+        Get UniSat Inscriptions
+    </button>
+    <button onclick="sendBitcoinUniSat('tb1q9abcdefgh', 1000)">
+        Send Bitcoin
+    </button>
+    <button
+        onclick="sendInscriptionUniSat('tb1q8h8s4zd9y0lkrx334aqnj4ykqs220ss7mjxzny', 'e9b86a063d78cc8a1ed17d291703bcc95bcd521e087ab0c7f1621c9c607def1ai0', { feeRate: 15 })">
+        Send Inscription
+    </button>
+    <button onclick="signMessageUniSat('abcdefghijk123456789')">
+        Sign Message
+    </button>
+    <button onclick="pushTransactionUniSat({ rawtx: '02000000000135bd7d...' })">
+        Push Transaction
+    </button>
+    <button
+        onclick="signPsbtUniSat('70736274ff01007d....', { autoFinalized: false, toSignInputs: [{ index: 0, address: 'tb1q8h8....mjxzny' }] })">
+        Sign PSBT
+    </button>
+    <button
+        onclick="signPsbtsUniSat(['70736274ff01007d...', '70736274ff01007d...'], { autoFinalized: false, toSignInputs: [{ index: 0, address: 'tb1q8h8....mjxzny' }] })">
+        Sign Multiple PSBTs
+    </button>
+    <button onclick="pushPsbtUniSat('70736274ff01007d....')">Push PSBT</button>
+</body>
+
+</html>
