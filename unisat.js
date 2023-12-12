@@ -1,6 +1,5 @@
 // Browser Detection
 if (typeof window.unisat !== 'undefined') {
-    alert('UniSat Wallet is installed!');
     console.log('UniSat Wallet is installed!');
   }
   
